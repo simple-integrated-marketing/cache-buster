@@ -1,0 +1,40 @@
+{
+    "name": "simplecachebuster/simple-cache-buster",
+    "description": "Busts Cache",
+    "type": "craft-plugin",
+    "version": "1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "simple cache buster"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mark Williams",
+            "homepage": "mark@simple.com.au"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "simplecachebuster\\simplecachebuster\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Simple Cache Buster",
+        "handle": "simple-cache-buster",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "simplecachebuster\\simplecachebuster\\SimpleCacheBuster"
+    }
+}
