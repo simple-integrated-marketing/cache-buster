@@ -45,9 +45,13 @@ class SimpleCacheBusterTwigExtension extends \Twig_Extension
     public function cacheBust($file) {
 
         $path              = getcwd() . "/$file";
-        $modification_time = filemtime($path);
-        $render            = "{$file}?v={$modification_time}";
-        return "/$render";
+        if (filemtime($path)) {
+            $modification_time = filemtime($path);
+            $render            = "{$file}?v={$modification_time}";
+            return "/$render";
+        }
+
+        Craft::warning('Asset file not found.', 'SimpleCacheBuster');
 
     }
 
